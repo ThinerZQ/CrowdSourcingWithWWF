@@ -1,0 +1,2 @@
+try1.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrowdSourcing", "CrowdSourcing\CrowdSourcing.csproj", "{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Crowd", "http://localhost:33165", "{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{d57ea7f9-d15b-434f-8ce2-b4b4e05db3ad}|CrowdSourcing.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_33165"
+		Debug.AspNetCompiler.PhysicalPath = "Crowd\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_33165\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_33165"
+		Release.AspNetCompiler.PhysicalPath = "Crowd\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_33165\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Crowd\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F03B2B7-3F02-467D-A156-52BF2A663E71}"
+	ProjectSection(SolutionItems) = preProject
+		sqlserver.sql = sqlserver.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D57EA7F9-D15B-434F-8CE2-B4B4E05DB3AD}.Release|x86.ActiveCfg = Release|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{59620C24-5342-45C3-A3EE-7CE9A7D7E71A}.Release|x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

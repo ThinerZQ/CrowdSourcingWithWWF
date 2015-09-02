@@ -1,0 +1,2 @@
+decompose.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

@@ -1,0 +1,2 @@
+mainTask1.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

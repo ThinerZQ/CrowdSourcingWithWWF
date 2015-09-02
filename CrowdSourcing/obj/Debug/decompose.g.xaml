@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:decompose xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:local="clr-namespace:CrowdSourcing;assembly=CrowdSourcing" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>CrowdSourcing</x:String>
+      <x:String>System.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>CrowdSourcing</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <local:decompose.Implementation>
+    <StateMachine>
+      <StateMachine.InitialState>
+        <State x:Name="__ReferenceID2" DisplayName="Judging">
+          <State.Entry>
+            <local:GetCurrentWorkflowId>
+              <local:GetCurrentWorkflowId.currentWorkflowId>
+                <OutArgument x:TypeArguments="s:Guid">
+                  <mca:CSharpReference x:TypeArguments="s:Guid">workflowId</mca:CSharpReference>
+                </OutArgument>
+              </local:GetCurrentWorkflowId.currentWorkflowId>
+            </local:GetCurrentWorkflowId>
+          </State.Entry>
+          <State.Transitions>
+            <Transition DisplayName="T1">
+              <Transition.Trigger>
+                <Sequence x:Name="__ReferenceID0">
+                  <local:SetBookmark>
+                    <local:SetBookmark.bookmarkName>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String">BookmarkName.WaitJudgement</mca:CSharpValue>
+                      </InArgument>
+                    </local:SetBookmark.bookmarkName>
+                    <local:SetBookmark.returnObjectValue>
+                      <OutArgument x:TypeArguments="x:Object">
+                        <mca:CSharpReference x:TypeArguments="x:Object">simpleTask</mca:CSharpReference>
+                      </OutArgument>
+                    </local:SetBookmark.returnObjectValue>
+                  </local:SetBookmark>
+                  <Assign>
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String">simple</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String">simpleTask as string</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </Transition.Trigger>
+              <Transition.Condition>
+                <mca:CSharpValue x:TypeArguments="x:Boolean">simple.Equals("no")</mca:CSharpValue>
+              </Transition.Condition>
+              <Transition.To>
+                <State x:Name="__ReferenceID3" DisplayName="Decomposing">
+                  <State.Transitions>
+                    <Transition DisplayName="T2">
+                      <Transition.Trigger>
+                        <Sequence>
+                          <local:SetBookmark>
+                            <local:SetBookmark.bookmarkName>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">BookmarkName.Decomposing</mca:CSharpValue>
+                              </InArgument>
+                            </local:SetBookmark.bookmarkName>
+                            <local:SetBookmark.returnObjectValue>
+                              <OutArgument x:TypeArguments="x:Object">
+                                <mca:CSharpReference x:TypeArguments="x:Object">returnValue</mca:CSharpReference>
+                              </OutArgument>
+                            </local:SetBookmark.returnObjectValue>
+                          </local:SetBookmark>
+                          <Assign>
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="sc:ArrayList">
+                                <mca:CSharpReference x:TypeArguments="sc:ArrayList">arraylist_tasks</mca:CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="sc:ArrayList">
+                                <mca:CSharpValue x:TypeArguments="sc:ArrayList">returnValue as ArrayList</mca:CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </Transition.Trigger>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID1" DisplayName="Finish" IsFinal="True">
+                          <State.Entry>
+                            <Assign>
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="sc:ArrayList">
+                                  <mca:CSharpReference x:TypeArguments="sc:ArrayList">out_arraylist_task</mca:CSharpReference>
+                                </OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="sc:ArrayList">
+                                  <mca:CSharpValue x:TypeArguments="sc:ArrayList">arraylist_tasks</mca:CSharpValue>
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </State.Entry>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                  </State.Transitions>
+                </State>
+              </Transition.To>
+            </Transition>
+            <Transition Trigger="{x:Reference __ReferenceID0}" DisplayName="T3" To="{x:Reference __ReferenceID1}">
+              <Transition.Condition>
+                <mca:CSharpValue x:TypeArguments="x:Boolean">simple.Equals("yes");</mca:CSharpValue>
+              </Transition.Condition>
+            </Transition>
+          </State.Transitions>
+        </State>
+      </StateMachine.InitialState>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="x:Object" Name="simpleTask" />
+        <Variable x:TypeArguments="s:Guid" Name="workflowId" />
+        <Variable x:TypeArguments="x:String" Name="simple" />
+        <Variable x:TypeArguments="x:Object" Name="returnValue" />
+        <Variable x:TypeArguments="sc:ArrayList" Name="arraylist_tasks">
+          <Variable.Default>
+            <mca:CSharpValue x:TypeArguments="sc:ArrayList">null</mca:CSharpValue>
+          </Variable.Default>
+        </Variable>
+      </StateMachine.Variables>
+      <sads:DebugSymbol.Symbol>9xCpAtYJEI6JwriOjlfe7qsqUkU6XGx1Y2FzXE15RG9jdW1lbnRcVlMyMDEzXENyb3dkU291cmNpbmdTb2x1dGlvblxDcm93ZFNvdXJjaW5nXHhhbWxcZGVjb21wb3NlLnhhbWwaMwOuARICAQGpAQupAVEDAYUBNQedAQ8CAUBhD5QBFwIBF4EBF5ABHwIBAjcLPSgCAXtCD1saAgFUXg9eYQIBS5kBD5kBYwIBQmUXfiICARmDARuOASQCAQQ6ETpfAgF8QxFOJQIBaE8RWhoCAVVmGXEtAgEtchl9IgIBGosBIYsBcgIBDoYBIYYBfQIBBUYXRm8CAXJLF0tnAgFpVxdXaQIBX1IXUmMCAVZpH2l1AgE3bh9ucAIBLnofenkCASR1H3V4AgEb</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </local:decompose.Implementation>
+</local:decompose>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cx:try1 xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:cx="clr-namespace:CrowdSourcing.xaml;assembly=CrowdSourcing" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <cx:try1.Implementation>
+    <StateMachine InitialState="{x:Reference __ReferenceID8}">
+      <State x:Name="__ReferenceID8" DisplayName="待判定">
+        <State.Transitions>
+          <Transition DisplayName="T1">
+            <Transition.To>
+              <State x:Name="__ReferenceID1" DisplayName="分解中">
+                <State.Transitions>
+                  <Transition DisplayName="T3">
+                    <Transition.To>
+                      <State x:Name="__ReferenceID7" DisplayName="分解投票">
+                        <State.Transitions>
+                          <Transition DisplayName="T9">
+                            <Transition.To>
+                              <State x:Name="__ReferenceID3" DisplayName="解决中">
+                                <State.Transitions>
+                                  <Transition DisplayName="T2">
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID4" DisplayName="解决投票中">
+                                        <State.Transitions>
+                                          <Transition DisplayName="T6">
+                                            <Transition.To>
+                                              <State x:Name="__ReferenceID6" DisplayName="合并中">
+                                                <State.Transitions>
+                                                  <Transition DisplayName="T7">
+                                                    <Transition.To>
+                                                      <State x:Name="__ReferenceID0" DisplayName="FinalState" IsFinal="True" />
+                                                    </Transition.To>
+                                                  </Transition>
+                                                </State.Transitions>
+                                              </State>
+                                            </Transition.To>
+                                          </Transition>
+                                        </State.Transitions>
+                                      </State>
+                                    </Transition.To>
+                                  </Transition>
+                                </State.Transitions>
+                              </State>
+                            </Transition.To>
+                          </Transition>
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+          </Transition>
+          <Transition DisplayName="T4">
+            <Transition.To>
+              <State x:Name="__ReferenceID2" DisplayName="解决中">
+                <State.Transitions>
+                  <Transition DisplayName="T5">
+                    <Transition.To>
+                      <State x:Name="__ReferenceID5" DisplayName="解决投票中">
+                        <State.Transitions>
+                          <Transition DisplayName="T8" To="{x:Reference __ReferenceID0}" />
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+          </Transition>
+        </State.Transitions>
+      </State>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <sads:DebugSymbol.Symbol>d01FOlxsdWNhc1xNeURvY3VtZW50XFZTMjAxM1xDcm93ZFNvdXJjaW5nU29sdXRpb25cQ3Jvd2RTb3VyY2luZ1x4YW1sXHRyeTEueGFtbAoeA3sSAgEBHwVwDQIBGSMNVRUCARZbDWoVAgETKx1JJQIBEC8lQy0CAQ1fFWQdAgEKMy09NQIBBzc1N6gBAgEFJxVPHQIBAg==</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </cx:try1.Implementation>
+</cx:try1>

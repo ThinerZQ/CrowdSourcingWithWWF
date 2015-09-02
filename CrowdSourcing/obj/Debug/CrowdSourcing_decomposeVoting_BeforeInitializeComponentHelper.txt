@@ -1,0 +1,2 @@
+decomposeVoting.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

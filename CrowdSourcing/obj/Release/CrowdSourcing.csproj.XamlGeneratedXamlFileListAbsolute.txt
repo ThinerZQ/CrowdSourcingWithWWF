@@ -1,0 +1,16 @@
+obj\Release\baseActivity1.g.xaml
+obj\Release\decompose.g.xaml
+obj\Release\solving.g.xaml
+obj\Release\solveVoting.g.xaml
+obj\Release\mainTask.g.xaml
+obj\Release\mainTask1.g.xaml
+obj\Release\decomposeVoting.g.xaml
+obj\Release\Task.g.xaml
+obj\Release\CrowdSourcing_baseActivity1_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_decompose_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_solving_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_solveVoting_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_mainTask_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_mainTask1_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing_decomposeVoting_BeforeInitializeComponentHelper.txt
+obj\Release\CrowdSourcing.xaml_Task_BeforeInitializeComponentHelper.txt

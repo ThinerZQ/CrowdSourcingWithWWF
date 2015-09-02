@@ -1,0 +1,418 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="CrowdSourcing.xaml.try2" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <StateMachine InitialState="{x:Reference __ReferenceID11}">
+    <State x:Name="__ReferenceID11" DisplayName="判定中">
+      <State.Transitions>
+        <Transition DisplayName="T1">
+          <Transition.To>
+            <State x:Name="__ReferenceID2" DisplayName="分解中">
+              <State.Transitions>
+                <Transition DisplayName="T3">
+                  <Transition.To>
+                    <State x:Name="__ReferenceID3" DisplayName="分解完成">
+                      <State.Transitions>
+                        <Transition DisplayName="T4">
+                          <Transition.To>
+                            <State x:Name="__ReferenceID4" DisplayName="分解投票中">
+                              <State.Transitions>
+                                <Transition DisplayName="T5">
+                                  <Transition.To>
+                                    <State x:Name="__ReferenceID5" DisplayName="分解投票完成">
+                                      <State.Transitions>
+                                        <Transition DisplayName="T6">
+                                          <Transition.To>
+                                            <State x:Name="__ReferenceID1" DisplayName="等待解决">
+                                              <State.Transitions>
+                                                <Transition DisplayName="T8">
+                                                  <Transition.To>
+                                                    <State x:Name="__ReferenceID6" DisplayName="解决中">
+                                                      <State.Transitions>
+                                                        <Transition DisplayName="T9">
+                                                          <Transition.To>
+                                                            <State x:Name="__ReferenceID7" DisplayName="解决完成">
+                                                              <State.Transitions>
+                                                                <Transition DisplayName="T10">
+                                                                  <Transition.To>
+                                                                    <State x:Name="__ReferenceID8" DisplayName="解决投票中">
+                                                                      <State.Transitions>
+                                                                        <Transition DisplayName="T11">
+                                                                          <Transition.To>
+                                                                            <State x:Name="__ReferenceID10" DisplayName="解决投票完成">
+                                                                              <State.Transitions>
+                                                                                <Transition DisplayName="T12">
+                                                                                  <Transition.To>
+                                                                                    <State x:Name="__ReferenceID9" DisplayName="合并中">
+                                                                                      <State.Transitions>
+                                                                                        <Transition DisplayName="T14">
+                                                                                          <Transition.To>
+                                                                                            <State x:Name="__ReferenceID0" DisplayName="FinalState" IsFinal="True" sap2010:WorkflowViewState.IdRef="State_1" />
+                                                                                          </Transition.To>
+                                                                                          <sap2010:WorkflowViewState.IdRef>Transition_1</sap2010:WorkflowViewState.IdRef>
+                                                                                        </Transition>
+                                                                                      </State.Transitions>
+                                                                                      <sap2010:WorkflowViewState.IdRef>State_2</sap2010:WorkflowViewState.IdRef>
+                                                                                    </State>
+                                                                                  </Transition.To>
+                                                                                  <sap2010:WorkflowViewState.IdRef>Transition_2</sap2010:WorkflowViewState.IdRef>
+                                                                                </Transition>
+                                                                                <Transition DisplayName="T13" To="{x:Reference __ReferenceID0}" sap2010:WorkflowViewState.IdRef="Transition_3" />
+                                                                              </State.Transitions>
+                                                                              <sap2010:WorkflowViewState.IdRef>State_3</sap2010:WorkflowViewState.IdRef>
+                                                                            </State>
+                                                                          </Transition.To>
+                                                                          <sap2010:WorkflowViewState.IdRef>Transition_4</sap2010:WorkflowViewState.IdRef>
+                                                                        </Transition>
+                                                                      </State.Transitions>
+                                                                      <sap2010:WorkflowViewState.IdRef>State_4</sap2010:WorkflowViewState.IdRef>
+                                                                    </State>
+                                                                  </Transition.To>
+                                                                  <sap2010:WorkflowViewState.IdRef>Transition_5</sap2010:WorkflowViewState.IdRef>
+                                                                </Transition>
+                                                              </State.Transitions>
+                                                              <sap2010:WorkflowViewState.IdRef>State_5</sap2010:WorkflowViewState.IdRef>
+                                                            </State>
+                                                          </Transition.To>
+                                                          <sap2010:WorkflowViewState.IdRef>Transition_6</sap2010:WorkflowViewState.IdRef>
+                                                        </Transition>
+                                                      </State.Transitions>
+                                                      <sap2010:WorkflowViewState.IdRef>State_6</sap2010:WorkflowViewState.IdRef>
+                                                    </State>
+                                                  </Transition.To>
+                                                  <sap2010:WorkflowViewState.IdRef>Transition_7</sap2010:WorkflowViewState.IdRef>
+                                                </Transition>
+                                              </State.Transitions>
+                                              <sap2010:WorkflowViewState.IdRef>State_7</sap2010:WorkflowViewState.IdRef>
+                                            </State>
+                                          </Transition.To>
+                                          <sap2010:WorkflowViewState.IdRef>Transition_8</sap2010:WorkflowViewState.IdRef>
+                                        </Transition>
+                                        <Transition DisplayName="T7" To="{x:Reference __ReferenceID0}" sap2010:WorkflowViewState.IdRef="Transition_9" />
+                                      </State.Transitions>
+                                      <sap2010:WorkflowViewState.IdRef>State_8</sap2010:WorkflowViewState.IdRef>
+                                    </State>
+                                  </Transition.To>
+                                  <sap2010:WorkflowViewState.IdRef>Transition_10</sap2010:WorkflowViewState.IdRef>
+                                </Transition>
+                              </State.Transitions>
+                              <sap2010:WorkflowViewState.IdRef>State_9</sap2010:WorkflowViewState.IdRef>
+                            </State>
+                          </Transition.To>
+                          <sap2010:WorkflowViewState.IdRef>Transition_11</sap2010:WorkflowViewState.IdRef>
+                        </Transition>
+                      </State.Transitions>
+                      <sap2010:WorkflowViewState.IdRef>State_10</sap2010:WorkflowViewState.IdRef>
+                    </State>
+                  </Transition.To>
+                  <sap2010:WorkflowViewState.IdRef>Transition_12</sap2010:WorkflowViewState.IdRef>
+                </Transition>
+              </State.Transitions>
+              <sap2010:WorkflowViewState.IdRef>State_11</sap2010:WorkflowViewState.IdRef>
+            </State>
+          </Transition.To>
+          <sap2010:WorkflowViewState.IdRef>Transition_13</sap2010:WorkflowViewState.IdRef>
+        </Transition>
+        <Transition DisplayName="T2" To="{x:Reference __ReferenceID1}" sap2010:WorkflowViewState.IdRef="Transition_14" />
+      </State.Transitions>
+      <sap2010:WorkflowViewState.IdRef>State_12</sap2010:WorkflowViewState.IdRef>
+    </State>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
+    <sap2010:WorkflowViewState.IdRef>StateMachine_1</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>d01FOlxsdWNhc1xNeURvY3VtZW50XFZTMjAxM1xDcm93ZFNvdXJjaW5nU29sdXRpb25cQ3Jvd2RTb3VyY2luZ1x4YW1sXHRyeTIueGFtbA0eA54BEgIBAR8FkAENAgEiIw2JARUCAR8nFYMBHQIBHCsdfSUCARkvJXctAgEWNzVqPQIBEzs9ZEUCARA/RV5NAgENR1VRXQIBCktdS9ABAgEIMy1wNQIBBUNNWFUCAQI=</sads:DebugSymbol.Symbol>
+  </StateMachine>
+  <sap2010:WorkflowViewState.IdRef>CrowdSourcing.xaml.try2_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="State_1" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">533,469.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">457,496.95 487,496.95 487,500 533,500</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">32</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_2" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">343,469.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">183,496.9 213,496.9 213,500 343,500</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">183,496.9 213,496.9 213,560.5 595.7,560.5 595.7,530.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">43</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_3" sap:VirtualizedContainerService.HintSize="130,68">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">53,459.5</av:Point>
+            <av:Size x:Key="ShapeSize">130,68</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">116</x:Double>
+            <x:Double x:Key="StateContainerHeight">31.673333333333233</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">113.95,395 113.95,425 111.5,425 111.5,459.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_4" sap:VirtualizedContainerService.HintSize="121,70">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">59.5,325</av:Point>
+            <av:Size x:Key="ShapeSize">121,70</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">107</x:Double>
+            <x:Double x:Key="StateContainerHeight">33.673333333333176</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">263,360 233,360 233,356.5 180.5,356.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">32</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_5" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">263,329.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">463,366.1 377,366.1</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_6" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">463,329.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_7">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">653,356.95 623,356.95 623,363.05 577,363.05</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">33</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_7" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">653,329.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">703.2,255.5 703.2,285.5 704.3,285.5 704.3,329.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">34</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_9">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">703.2,255.5 703.2,280.836666666667 812,280.836666666667 812,506.1 647,506.1</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">35</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_8" sap:VirtualizedContainerService.HintSize="136,71">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">642,184.5</av:Point>
+            <av:Size x:Key="ShapeSize">136,71</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">122</x:Double>
+            <x:Double x:Key="StateContainerHeight">35.326666666666711</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">585,226.9 615,226.9 615,227.1 642,227.1</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_9" sap:VirtualizedContainerService.HintSize="130,69">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">455,185.5</av:Point>
+            <av:Size x:Key="ShapeSize">130,69</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">116</x:Double>
+            <x:Double x:Key="StateContainerHeight">33.326666666666711</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">367,223.05 397,223.05 397,220 455,220</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_10" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">253,189.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_12">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">164,224.55 194,224.55 194,223.05 253,223.05</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">41</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_11" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">50,191</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_13">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">107,141 107,191</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_14">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">107,141 107,171 797,171 797,369.15 767,369.15</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">48</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_12" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">50,80</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="839,709">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <x:Double x:Key="StateContainerWidth">825</x:Double>
+            <x:Double x:Key="StateContainerHeight">672.67333333333318</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,110.5 164,110.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CrowdSourcing.xaml.try2_1" sap:VirtualizedContainerService.HintSize="879,789" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

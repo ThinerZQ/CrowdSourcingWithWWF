@@ -1,0 +1,2 @@
+paper-use.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper
